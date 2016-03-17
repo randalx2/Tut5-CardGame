@@ -15,6 +15,14 @@ using namespace std;
 
 int main()
 {
+	//Testing of the individual card class
+	Card c1("black", 5);
+	c1.colour();
+	c1.number();
+	c1.print();
+	//NB Card testing complete. Will perform unit tests as well
+
+
 
 
 	system("PAUSE");
