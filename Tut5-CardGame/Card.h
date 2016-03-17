@@ -10,6 +10,9 @@
 using namespace std;
 
 class Card {
+private: string cardColour; 
+		 int cardNumber;
+public:
 	Card();
 	Card(string, int);  //Overloading constructor used to set attributes
 	~Card();
