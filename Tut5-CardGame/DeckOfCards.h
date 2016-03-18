@@ -7,7 +7,7 @@
 #define DECKOFCARDS_H
 #include <string>
 
-#include "Card.h"
+#include "Card.h"   //Nesting a class within another class -- better to use header files
 
 using namespace std;
 

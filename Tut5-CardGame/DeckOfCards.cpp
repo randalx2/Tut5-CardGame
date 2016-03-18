@@ -46,7 +46,8 @@ DeckOfCards::~DeckOfCards(){
 DeckOfCards DeckOfCards::reset(){
 	//Pretty much does the same thing the constructor did
 	//when the deck was first created
-	return DeckOfCards();
+	cardsRemaining = 20; //incase the draw method was called allocate 20 cards again
+	return DeckOfCards(); //NB program returned errors if attempting 20 draws without resetting the card count here
 }
 
 int DeckOfCards::numberOfCards(){

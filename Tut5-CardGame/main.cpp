@@ -34,8 +34,22 @@ int main()
 	d1->draw();
 	cout << "Cards Remaining: " << d1->numberOfCards() << endl;
 	cout << endl;
+
+	cout << "Resetting Deck Now" << endl;
 	d1->reset(); //Reset back to original deck
 	//NB Testing Complete. Further unit tests to be done
+	cout << endl;
+	cout << "Cards Remaining " << d1->numberOfCards();
+	cout << endl;
+	cout << "Drawing all cards til none are left! " << endl;
+	cout << endl;
+	for (int i = 0; i < 20; i++)
+	{
+		d1->draw();
+		cout << "Cards Remaining: " << d1->numberOfCards() << endl;
+	}
+
+	delete d1;
 
 	system("PAUSE");
 	return 0;
