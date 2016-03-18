@@ -22,7 +22,7 @@ int main()
 	c1.print();
 	//NB Card testing complete. Will perform unit tests as well
 
-
+	//Testing DeckOfCards
 
 
 	system("PAUSE");
