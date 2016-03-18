@@ -73,13 +73,14 @@ void DeckOfCards::shuffle(){
 	//cards and switching their order; repeat this 50 times). Only works if there are 2
 	//or more cards.
 	srand((unsigned)time(NULL));  //seed the randomizer
+	rand(); rand(); rand(); //Call randomizer a few times to get a good seed
 	Card temp;
 	int r1 = 0; //first randomizer index variable
 	int r2 = 0; //second randomizer variable
 	for (int i = 0; i < 50; i++)
 	{
 		r1 = rand() % 19;  //random number between 0 and 19
-		r2 = rand() % 19;
+		r2 = rand() % 19; //since it choose array index between 0 and 19
 		if (r1 != r2)
 		{
 			temp = cardPtr[r1];
