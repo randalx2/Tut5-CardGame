@@ -71,16 +71,22 @@ void DeckOfCards::shuffle(){
 	//or more cards.
 	srand((unsigned)time(NULL));  //seed the randomizer
 	Card temp;
-	int r = 0; //randomizer index variable
+	int r1 = 0; //first randomizer index variable
+	int r2 = 0; //second randomizer variable
 	for (int i = 0; i < 50; i++)
 	{
-		r = rand() % 19;  //random number between 0 and 19
-		if (r < 19)
+		r1 = rand() % 19;  //random number between 0 and 19
+		r2 = rand() % 19;
+		if (r1 != r2)
 		{
-			temp = cardPtr[r];
-			cardPtr[r] = cardPtr[r + 1];
-			cardPtr[r + 1] = temp;
-		}		
+			temp = cardPtr[r1];
+			cardPtr[r1] = cardPtr[r2];
+			cardPtr[r2] = temp;
+		}	
+		else
+		{
+			cout << "Error During Shuffling. Trying again" << endl;
+		}
 	}
 	//Print out shuffled cards
 	cout << "Cards Shuffled!!" << endl;
