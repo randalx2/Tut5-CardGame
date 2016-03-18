@@ -54,11 +54,13 @@ int DeckOfCards::numberOfCards(){
 }
 
 Card DeckOfCards::peek(){
+	cout << "Peeking at Card" << endl;
 	cardPtr[cardsRemaining - 1].print();  //print out card at top of deck
 	return cardPtr[cardsRemaining - 1];
 }
 
 Card DeckOfCards::draw(){
+	cout << "Drawing Card" << endl;
 	cardPtr[cardsRemaining - 1].print();
 	cardsRemaining--;  //Decrement card count
 	return cardPtr[cardsRemaining];

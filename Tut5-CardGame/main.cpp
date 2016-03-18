@@ -25,12 +25,17 @@ int main()
 	//Testing DeckOfCards
 	DeckOfCards *d1 = new DeckOfCards(); //Since we have dynamic attributes, best to make the object dynamic as well
 	cout << endl;
-	cout << d1->numberOfCards() << endl;
+	cout << "Cards Remaining: " << d1->numberOfCards() << endl;
 
 	d1->peek();
+	cout << endl;
 	d1->shuffle();
+	cout << endl;
 	d1->draw();
+	cout << "Cards Remaining: " << d1->numberOfCards() << endl;
+	cout << endl;
 	d1->reset(); //Reset back to original deck
+	//NB Testing Complete. Further unit tests to be done
 
 	system("PAUSE");
 	return 0;
