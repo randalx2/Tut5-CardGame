@@ -28,6 +28,9 @@ DeckOfCards::DeckOfCards(){
 		cardPtr[i] = Card("black", (i + 1) - 10);
 	}
 	//Print out the default deck for testing
+	cout << endl;
+	cout << "Default Deck is: " << endl;
+
 	for (int i = 0; i < 20; i++)
 	{
 		cardPtr[i].print();
@@ -60,4 +63,30 @@ Card DeckOfCards::draw(){
 	cardsRemaining--;  //Decrement card count
 	return cardPtr[cardsRemaining];
 	delete &cardPtr[cardsRemaining];
+}
+
+void DeckOfCards::shuffle(){
+	//shuffle() shuffles the ORDER of cards (you should do this by picking two random
+	//cards and switching their order; repeat this 50 times). Only works if there are 2
+	//or more cards.
+	srand((unsigned)time(NULL));  //seed the randomizer
+	Card temp;
+	int r = 0; //randomizer index variable
+	for (int i = 0; i < 50; i++)
+	{
+		r = rand() % 19;  //random number between 0 and 19
+		if (r < 19)
+		{
+			temp = cardPtr[r];
+			cardPtr[r] = cardPtr[r + 1];
+			cardPtr[r + 1] = temp;
+		}		
+	}
+	//Print out shuffled cards
+	cout << "Cards Shuffled!!" << endl;
+	for (int i = 0; i < 20; i++)
+	{
+		cardPtr[i].print();
+	}
+
 }
